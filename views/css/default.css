@@ -1,0 +1,110 @@
+@import url(https://fonts.googleapis.com/css?family=Fira+Sans:400,500);
+@import url(https://fonts.googleapis.com/css?family=Ubuntu:400,500,700);
+html{
+  margin: 0 0;
+  padding: 0 0;
+
+}
+body {
+  width: 100%;
+  background-size: cover;
+  background-attachment: fixed;
+  background-image:url(../images/fondo.jpg);
+  font-family: 'Ubuntu', sans-serif;
+}
+/*Otros*/
+.link a{
+  text-decoration: none;
+  color: rgb(200,200,200);
+}
+.link a:hover{
+  text-decoration: none;
+  color: rgb(0,0,0);
+}
+.negrita{
+  font-weight: bold;
+}
+/*Cabecera*/
+.cabecera{
+  padding: 30px;
+  background: url(../images/cabecera.png);
+}
+.data-cabecera > span{
+  /*Texto*/
+  padding: 8px;
+  font-size: 28px;
+  color: white;
+  text-shadow: 2px 2px 2px rgb(86, 86, 86);
+}
+.data-cabecera > img{
+  /*Logo*/
+  width: 5%;
+
+}
+/*A partir de 720px*/
+@media(max-width: 720px){
+
+}
+
+/*Menu*/
+.menu{
+  background: rgb(0,0,0);
+  -webkit-box-shadow: -5px -3px 14px 0px rgba(50, 50, 50, 0.75);
+  -moz-box-shadow:    -5px -3px 14px 0px rgba(50, 50, 50, 0.75);
+  box-shadow:         -5px -3px 14px 0px rgba(50, 50, 50, 0.75);
+
+}
+.ul-menu>li{
+  background: rgb(0,0,0);
+
+}
+.ul-menu>li:hover{
+  background: rgb(0,0,0);
+}
+.ul-menu>li:focus{
+  background: rgb(0,0,0);
+}
+.ul-menu>li>a{
+  color: rgb(250,250,250);
+   font-size: 15px;
+}
+.ul-menu>li>a:hover{
+  background: rgb(10,10,10);
+  color: rgb(250,250,250);
+   font-size: 15px;
+}
+.ul-menu>li>a:focus{
+  color: rgb(250,250,250);
+  background: rgb(0,0,0);
+   font-size: 15px;
+}
+
+.ul-menu>.active{
+  background: rgb(10,10,10);
+  font-size: 15px;
+}
+/*Data*/
+.cont-data{
+  padding: 20px;
+}
+.cuadro-data{
+  color: rgb(250,250,250);
+
+}
+.cuadro-data>h3{
+
+}
+.cuadro-data>img{
+  position: relative;
+  width: 100%;
+}
+
+/*Footer*/
+.foot{
+  padding: 20px;
+}
+.cuadro-foot{
+  color: white;
+  font-size: 14px;
+  text-align: center;
+}

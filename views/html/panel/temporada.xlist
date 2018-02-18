@@ -1,0 +1,4 @@
+<?php
+$r_temporada = array('1' => 'Primavera', '2' => 'Verano', '3' => 'Otoño' , '4' => 'Invierno');
+$n_temporada = count($r_temporada);
+ ?>

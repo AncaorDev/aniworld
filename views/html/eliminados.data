@@ -1,0 +1,28 @@
+<!--  Estudio - e1 -->
+<!--  Odio usar tablas -->
+<table class="table table-responsive ">
+  <thead>
+    <tr>
+      <th>Id Estudio</th>
+      <th>Nombre Esudio</th>
+      <th>Descripción Estudio</th>
+      <th>Acciones</th>
+    </tr>
+  </thead>
+  <tbody>
+    <?php $conexion = new gestionBD();
+         $sql = "SELECT * FROM estudio";
+         $estudio=$conexion->ejecutar($sql);
+         $rows= $conexion->rows($estudio);
+         if ($rows>0) {
+           while ($estudio_r=$conexion->recorrer($estudio)) { ?>
+             <tr>
+               <td><?php echo $estudio_r[0] ?></td>
+               <td><h5><?php echo $estudio_r[1] ?></h5></td>
+               <td><?php echo $estudio_r[2] ?></td>
+               <td><a target="_top" href="panel/estudio/editar/<?php echo $estudio_r[0] ?>"> <button class="btn btn-primary" type="button" name="button" >Editar</button></a> <a target="_top" href="panel/estudio/eliminar/<?php echo $estudio_r[0] ?>"><button class="btn btn-danger" type="button" name="button" >Eliminar</button></a></td>
+             </tr>
+      <?php } }  $conexion->liberar($estudio); $conexion->cerrar();  ?>
+ </tbody>
+</table>
+<!--  -->

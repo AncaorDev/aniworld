@@ -1,0 +1,329 @@
+@import url(https://fonts.googleapis.com/css?family=Fira+Sans:400,500);
+@import url(https://fonts.googleapis.com/css?family=Ubuntu:400,500,700); /* font-family: 'Ubuntu', sans-serif; */
+html { }
+/*Cuerpo*/
+body {
+  background-image: url(../images/fondo_general.png);
+  background-attachment: fixed;
+  max-width: 100%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: left;
+  font-family: 'Ubuntu', sans-serif;
+}
+#quitar {
+  position: relative;;
+  z-index: 5;
+}
+.cont-load{
+  padding: 0;
+}
+#load {
+  padding: 0;
+  margin: 0;
+  width: 100%;
+  position: relative;
+  height: 400px;
+  text-align: center;
+  z-index: 4;
+  background: rgb(225, 225, 225);
+}
+/* Generales*/
+.center {
+  text-align: center;
+}
+/* Detalles de versión*/
+.about {
+  text-align:center;
+  font-family: 'Ubuntu', sans-serif;
+}
+.min {
+  font-size: 10px;
+}
+.add {
+  color: rgb(0, 138, 0);
+}
+.work {
+  color: rgb(223, 107, 30);
+}
+/* Enlaces */
+a {
+  text-decoration: none;
+}
+a:hover{
+  text-decoration: none;
+}
+a:focus{
+  text-decoration: none;
+}
+/* Fin-Enlaces */
+
+/* Los enlaces que dentro tengan una clase label*/
+a .label {
+  margin-left:5px;
+  transition: padding 0.3s;
+}
+a .label:hover {
+  margin-left:5px;
+  padding: 4px;
+}
+/* Fin Enlaces Label */
+
+/* Check Box */
+.l-check {
+  padding: 5px;
+  margin: 4px 4px;
+}
+/* Fin-Check Box */
+
+/* Imagen width auto => para que la imagen se adapte*/
+.img-full{
+  width: 100%;
+}
+
+/* Clase body*/
+.body {
+  margin-bottom: 20px;
+}
+
+/* generos => contenedor para los generos*/
+.generos{
+  width: 100%;
+  position: relative;
+}
+.lab{
+
+}
+/* Cabecera dentro del cuerpo */
+.cabecera-body{
+  background: rgb(252, 252, 252);
+  color:black;
+  padding-top: 10px;
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-bottom: 10px;
+  border-bottom:solid 1px black;
+}
+/* Contenedor de todo el cuerpo */
+.cuadro-body{
+  background: rgb(252, 252, 252);
+  color:black;
+  padding-top: 10px;
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-bottom: 10px;
+}
+.cuadro-normal{
+  background: rgb(252, 252, 252);
+  color:black;
+  padding-top: 0px;
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-bottom: 0px;
+}
+
+/*Cuadro de cada anime */
+.cuadro-anime{
+
+}
+.cuadro-anime > .img-anime {
+  width: 320px;
+  height: 480px;
+}
+.cuadro-anime > p{
+  font-size: 12px;
+  margin: 0 0;
+}
+.cuadro-anime > .title{
+  font-size: 14px;
+  font-weight: bolder;
+}
+/*Dentro de las 1 columna Normal*/
+.cuadro-anime > .col-n-1 {
+  clear: both;
+  height: 68px;
+  overflow: hidden;
+}
+/*Dentro de las 1 columna*/
+.cuadro-anime > .col-1 {
+  clear: both;
+  height: 126px;
+  overflow: hidden;
+}
+.cuadro-anime > .col-1 > p{
+  margin: 0 0;
+  font-size: 12px;
+  width: 100%;
+  float: left;
+}
+.cuadro-anime > .col-1 > .title{
+  margin-top:0;
+  margin-right: 0;
+  margin-left: 0;
+  margin-bottom: 0;
+  font-size: 14px;
+  font-weight: bolder;
+}
+.cuadro-anime > .col-1 > .descrip {
+  text-align:  justify;
+  font-size: 13px;
+}
+
+/*Dentro de las 2 columnas principal*/
+.cuadro-anime > .div-col-2{
+  width: 100%;
+}
+.cuadro-anime > .div-col-2 > .cont-img{
+  width: 65%;
+  float: left;
+}
+.cuadro-anime > .div-col-2 > .cont-img > .img-anime{
+  width: 100%;
+}
+@media (min-width:720px)  {
+  .cuadro-anime > .div-col-2 > .cont-img > .img-anime{
+    width: 100%;
+    height: 250px;
+  }
+}
+.cuadro-anime > .div-col-2 > .cont-data{
+  width: 35%;
+  height: ;
+  float: left;
+}
+/*.cuadro-anime > .div-col-2 > .cont-data > .title{
+  margin-top:5px;
+  margin-right: 0;
+  margin-left: 0;
+  margin-bottom: 0;
+  font-size: 14px;
+  font-weight: bolder;
+}
+.cuadro-anime > .div-col-2 > .cont-data > .descrip {
+  font-weight: normal;
+  font-size: 13px;
+}*/
+
+.title{
+  margin-top:6px;
+  margin-right: 0;
+  margin-left: 0;
+  margin-bottom: 0;
+  font-size: 14px;
+  font-weight: bolder;
+}
+.title-full{
+  margin-top:16px;
+  margin-right: 0;
+  margin-left: 0;
+  margin-bottom: 0;
+  font-size: 14px;
+  font-weight: bolder;
+}
+.descrip {
+  font-weight: normal;
+  font-size: 13px;
+}
+/*Base del cuadro del anime*/
+.base-cuadro{
+  background: rgb(225, 225, 225);
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-left: 0;
+  padding-right: 0;
+}
+.base-cuadro > a {
+  text-align: center;
+  text-decoration: none;
+}
+.base-cuadro > .vmas {
+  background: rgb(225, 225, 225);
+  text-align: center;
+  color: rgb(24, 28, 32);
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-left: 28px;
+  padding-right: 28px;
+  margin: 0 0;
+  text-decoration: none;
+}
+
+.base-cuadro > .vmas:hover {
+  color: white;
+  background: rgb(100, 100, 100);
+  text-decoration: none;
+}
+/*Panel de Aministracion*/
+.item-anime {
+
+}
+.item-anime .div-full-2{
+  width: 100%;
+}
+.item-anime .div-full-2 .data-img{
+  width: 90%;
+  margin: 0 auto;
+}
+.item-anime .div-full-2 .data-img .img-anime{
+  width: 100%;
+}
+.item-anime .div-full-2 .data-anime{
+  float: left;
+  width: 100%;
+}
+.item-anime .div-full-2 .data-anime .div-media-2{
+  clear: both;
+  width:100%;
+}
+.item-anime .div-full-2 .data-anime .div-media-2 .media1{
+
+  width: 100%;
+}
+.item-anime .div-full-2 .data-anime .div-media-2 .full{
+
+  width: 100%;
+}
+@media (min-width:720px) { /*Analizar boot e igualar*/
+  .item-anime {
+
+  }
+  .item-anime .div-full-2{
+    width: 100%;
+  }
+  .item-anime .div-full-2 .data-img{
+    float: left;
+    width: 20%;
+  }
+  .item-anime .div-full-2 .data-img .img-anime{
+    width: 100%;
+    height: 260px;
+  }
+  .item-anime .div-full-2 .data-anime{
+    float: left;
+    width: 70%;
+  }
+  .item-anime .div-full-2 .data-anime .div-media-2{
+    clear: both;
+    width:100%;
+  }
+  .item-anime .div-full-2 .data-anime .div-media-2 .media1{
+    float:left;
+    width: 50%;
+  }
+  .item-anime .div-full-2 .data-anime .div-media-2 .full{
+    float:left;
+    width: 100%;
+  }
+}
+/*Footer*/
+.foot{
+  margin: 0 0;
+  padding: 30px;
+  width: 100%;
+  background: rgb(252, 252, 252);
+}
+.cuadro-foot{
+  color:rgb(24, 28, 32);
+  font-size: 14px;
+  text-align: center;
+}

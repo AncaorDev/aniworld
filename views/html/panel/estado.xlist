@@ -1,0 +1,4 @@
+<?php
+$r_estado = array('1' => 'En Emisión', '2' => 'Finalizado', '3' => 'Por Emitir');
+$n_estado = count($r_estado);
+ ?>
