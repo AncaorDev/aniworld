@@ -3,7 +3,7 @@ Usuarios:
 - Administrador
 - Moderador
 
-Contraseña para los 3:
+ContraseÃ±a para los 3:
 - 123
 
 Funciona con la Base de Datos aniworld.sql
