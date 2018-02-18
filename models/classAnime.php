@@ -186,6 +186,7 @@ if (isset($_POST['sinopsis']) &&  $this->error==0 ) {
         $erro_img = $this->img_anime = $_FILES['img_anime']['error'];
         $nom_tmp = $this->img_anime = $_FILES['img_anime']['tmp_name'];
         $dir_subida = 'views/images/anime/principal/';
+        
         $fichero_subido = $dir_subida . basename($nom_img);
         if ($nom_img == '' or $nom_img == null) { //Verificamos si esta vacio o null
           $this->error = 10;
@@ -515,8 +516,8 @@ if (isset($_POST['sinopsis']) &&  $this->error==0 ) {
      }
 
   } //Fin eliminar
-  function __destruc(){
-    $this->db->cerrar();
+  function __destruct(){
+    $this->conexion->cerrar();
   }
 }
 

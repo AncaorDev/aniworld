@@ -1,7 +1,10 @@
 <?php
 $imagen='<div class="col-md-12 cabecera-body"><img class="img-full" src="views/images/nise.png" alt="" /></div>';
   //Verficamos los permisos y si existe el usuario
-if (isset($_SESSION['app_id']) and $usuarios[$_SESSION['app_id']]['id_tipouser'] == 8) { ?>
+if (isset($_SESSION['app_id']) and $usuarios[$_SESSION['app_id']]['id_user'] == 1) { 
+  // Guardamos el ID
+  $id_user = $usuarios[$_SESSION['app_id']]['id_user']
+?>
 <?php include (HTML_DIR.'includes/head.php'); // Aquí comienza el Cuerpo ?>
 <?php include (HTML_DIR.'includes/navbar.php') ?>
 <section class="body">
@@ -30,12 +33,11 @@ if (isset($_SESSION['app_id']) and $usuarios[$_SESSION['app_id']]['id_tipouser']
                 //Si la accion es agregar hara lo siguiente
                 case 'agregar':
                   if ($_POST) {
-                        $anime->agregar();
+                        $anime->agregar($id_user);
                   } else {
                         include (HTML_DIR.'personal/agregar-anime.inc');
                   }
                 break;
-
                 //Si la accion es Editar hara lo siguiente
                 case 'editar':
                   if ($isset_id) {

@@ -1,4 +1,3 @@
-
 <?php
   //Verficamos los permisos y si existe el usuario
 if (isset($_SESSION['app_id']) and ($usuarios[$_SESSION['app_id']]['id_tipouser'] == 1 or $usuarios[$_SESSION['app_id']]['id_tipouser'] == 8)) { ?>

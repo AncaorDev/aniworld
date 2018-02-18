@@ -2,30 +2,37 @@ RewriteEngine on
 RewriteCond %{SCRIPT_FILENAME} !-d
 RewriteCond %{SCRIPT_FILENAME} !-f
 
+#Para obtener la variable de la página al que se quiere accesar
 RewriteRule ^([a-zA-Z0-9-]*)$ index.php?page=$1
+
+#Para obtener la subpagina del panel
 RewriteRule ^panel/([a-zA-Z0-9-]*)$ index.php?page=panel&subpage=$1
 
-
+#Para obtener las acciones de panel/anime 
 RewriteRule ^panel/anime/([a-zA-Z0-9-]*)$ index.php?page=panel&subpage=anime&action=$1
 RewriteRule ^panel/anime/agregar/([a-zA-Z0-9-]*)$ index.php?page=panel&subpage=anime&action=agregar&std=$1
 RewriteRule ^panel/anime/([a-zA-Z0-9-]*)/([a-zA-Z0-9-]*)$ index.php?page=panel&subpage=anime&action=$1&dato=$2
 
+#Para obtener las acciones de panel/genero 
 RewriteRule ^panel/genero/([a-zA-Z0-9-]*)$ index.php?page=panel&subpage=genero&action=$1
 RewriteRule ^panel/genero/agregar/([a-zA-Z0-9-]*)$ index.php?page=panel&subpage=genero&action=agregar&std=$1
 RewriteRule ^panel/genero/([a-zA-Z0-9-]*)/([a-zA-Z0-9-]*)$ index.php?page=panel&subpage=genero&action=$1&dato=$2
 
+#Para obtener las acciones de panel/estudio 
 RewriteRule ^panel/estudio/([a-zA-Z0-9-]*)$ index.php?page=panel&subpage=estudio&action=$1
 RewriteRule ^panel/estudio/agregar/([a-zA-Z0-9-]*)$ index.php?page=panel&subpage=estudio&action=agregar&std=$1
 RewriteRule ^panel/estudio/([a-zA-Z0-9-]*)/([a-zA-Z0-9-]*)$ index.php?page=panel&subpage=estudio&action=$1&dato=$2
 
+#Para obtener las subpaginas de temporada y genero
 RewriteRule ^temp/([a-zA-Z0-9-]*)$ index.php?page=temp&subpage=$1
 RewriteRule ^gen/([a-zA-Z0-9-]*)$ index.php?page=gen&subpage=$1
 
 RewriteRule ^personal/([a-zA-Z0-9-]*)$ index.php?page=personal&action=$1
 RewriteRule ^personal/([a-zA-Z0-9-]*)/([a-zA-Z0-9-]*)$ index.php?page=personal&action=$1&dato=$2
 
+#Para obtener las acciones de favoritos 
 RewriteRule ^favoritos/([a-zA-Z0-9-]*)$ index.php?page=favoritos&action=$1
-
+RewriteRule ^favoritos/([a-zA-Z0-9-]*)/([a-zA-Z0-9-]*)$ index.php?page=favoritos&action=$1&dato=$2
 #RewriteRule ^(.*)$ //index.php/$1 [L]
 
 ErrorDocument 403 /aniworld/403.html

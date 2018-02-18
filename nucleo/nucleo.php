@@ -7,6 +7,8 @@ DEFINE('TITLE','Aniworld');
 //DEFINE('DIR_ROOT','/'.'ancaor'.'/');
 DEFINE('COPY','Ancaor &#8480; 2015 - '.date('Y'));
 DEFINE('DATE',date('d-Y-m'));
+DEFINE('URL_HOME','http://localhost/aniworld/');
+
 //Estructura
 require('models/gestionBD.php');
 require('nucleo/bin/functions/functions.php');

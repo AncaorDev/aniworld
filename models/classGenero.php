@@ -191,8 +191,8 @@ class Genero {
         echo '<script language="javascript">window.location="/aniworld/panel/genero/listado"</script>' ;
      }
   }
-  function __destruc(){
-    $this->db->cerrar();
+  function __destruct(){
+    $this->conexion->cerrar();
   }
 }
 

@@ -11,7 +11,7 @@ $conexion = new gestionBD();?>
 					<h5 class="center">Cargando, Espere un momento...</h5>
 					<img src="views/images/alt.gif" alt="" />
 				</div>
-		  </div>
+		  </div>s
 				<div id="cargar" class="col-md-10 cuadro-body" style="display:none;">
 					<h3 style="text-align:center;" >Animes Agregados Recientemente</h3>
 	      	<div class="row">
@@ -58,38 +58,49 @@ $conexion = new gestionBD();?>
 									</div>
 									<div class="base-cuadro" style="text-align:center;">
 											<!-- <a class="vmas" href="#">Ver mas  </a> -->
-											<?php if (isset($_SESSION['app_id'])) {
-												$nom_anime = strtolower($anime_r['nom_anime']);
-												$format = str_replace(" ", "-", $nom_anime);
-												$fav=false;
-												$sqlfav = "SELECT * FROM favoritos WHERE id_user=".$usuarios[$_SESSION['app_id']]['id_user'];
-						            $idAnimes=$conexion->ejecutar($sqlfav);
-												$contArray=$conexion->rows($idAnimes);
-												if ($contArray>0) {
-													while ($arrayAnimes=$conexion->recorrer($idAnimes)) {
-														$ids[] = $arrayAnimes[1];}
-												}
-													for ($i=0; $i < $contArray; $i++) {
-															if ($anime_r['id_anime']==$ids[$i]) {
-																$fav = true;
-																$i = $contArray;
-															} else {
-																$fav = false;
-															}
-													}
-												echo '<a class="btn btn-primary" href="anime/'.$format.'">Ver Mas</span></a> ';
-												if ($fav) {
-													echo '<a class="btn btn-danger" href="favoritos/delete/'.$anime_r['id_anime'].'">Quitar de Favoritos<span class="glyphicon glyphicon-heart"></span></a>';
-												} else {
-													echo '<a class="btn btn-success" href="favoritos/add/'.$anime_r['id_anime'].'">Agregar a Favoritos<span class="glyphicon glyphicon-heart"></span></a>';
-												}
+											<?php $nom_anime = strtolower($anime_r['nom_anime']);
+												$format = str_replace(" ", "-", $nom_anime); 
+						if (isset($_SESSION['app_id'])) {
+												
+												 $fav=false;
+                       $sqlfav = "SELECT lista_animes FROM favoritos WHERE id_user=".$usuarios[$_SESSION['app_id']]['id_user'];
+                       //Ejecución de la consulta.
+                        $run_sqlfav=$conexion->ejecutar($sqlfav);
+                        //Consultamo si se obtuvieron datos
+                        $cont_data=$conexion->rows($run_sqlfav);  
+                        // Si los datos son mayores de 0 quiere decir que si tendra lista que mostrar
+                        if ($cont_data>0) {
+                          // Guardamos la lista en daots
+                          $datos = $conexion -> recorrer($run_sqlfav);
+                          $ids = explode(',', $datos[0]);
+                          // Al ser "$datos" un array asigamos a la posición 0 el dato 0
+                        } else { $datos[0] = 0; }
+                        $datafav = count($ids);
+                        for ($i=0; $i < $datafav; $i++) {
+                             if ($anime_r['id_anime']==$ids[$i]) {
+                               $fav = true;
+                               $i = $datafav;
+                             } else {
+                               $fav = false;
+                             }
+                         }
+                       
+                       if ($fav) {
+                       	echo '<a class="btn btn-primary" href="anime/'.$format.'">Ver Mas</span></a> ';
+                         echo '<a target="_top" class="btn btn-danger" href="favoritos/delete/'.$anime_r['id_anime'].'">Quitar de Favoritos<span class="glyphicon glyphicon-heart"></span></a>';
 
-											} else {
-												echo '<a  class="btn btn-danger"  role="button" data-toggle="modal" data-target="#Modal">
-							          Add to Favorites <span class="glyphicon glyphicon-heart"></span></a>';
-											}?>
-									</div>
-							</div>
+                       } else {
+                       	echo '<a class="btn btn-primary" href="anime/'.$format.'">Ver Mas</span></a> ';
+                         echo '<a target="_top" class="btn btn-success" href="favoritos/add/'.$anime_r['id_anime'].'">Agregar a Favoritos<span class="glyphicon glyphicon-heart"></span></a>';
+                       }
+
+                     } else {
+                     	echo '<a class="btn btn-primary" href="anime/'.$format.'">Ver Mas</span></a> ';
+                       echo '<a  class="btn btn-danger"  role="button" data-toggle="modal" data-target="#Modal">
+                       Add to Favorites <span class="glyphicon glyphicon-heart"></span></a>';
+                     }?>
+                 </div>
+             </div>
 					<?php   } $conexion->cerrar(); } else { ?>
 
 					<h4 style="text-align:center;" >No hay animes Agregados</h4>

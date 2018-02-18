@@ -8,8 +8,11 @@ if (!empty($_POST['user']) and !empty($_POST['pass'])) {
   $pass = Encriptar($_POST['pass']);
   $sql = $con->ejecutar("SELECT id_user FROM user WHERE (nom_user='$dato' OR mail_user='$dato') AND pass_user='$pass' LIMIT 1;");
   if ($con->rows($sql)>0) {
+      ini_set('session.upload_progress.enabled', 1);
       if ($_POST['sesion']) {
-        ini_set('session.cookie_lifetime', time() + (60*60*24));
+        ini_set('session.cookie_lifetime', time() + (60*60*24)); 
+      } else {
+        ini_set('session.cookie_lifetime',180); 
       }
   $_SESSION['app_id'] = $con->recorrer($sql)[0];
     echo 1;

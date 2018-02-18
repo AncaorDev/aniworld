@@ -3,6 +3,7 @@ class Personal {
 //Creamos las variables
   private $conexion;
   private $id_anime;
+  private $id_user;
   private $nom_anime;
   private $descrip_anime;
 
@@ -10,7 +11,7 @@ class Personal {
     $this->conexion = new gestionBD();
   }
 
-  function Agregar() {
+  function Agregar($id_user) {
     ///// -- ERRORES -- //// > Expandir(Atom)
     // 1.- Nombre de anime
     // 2.- Descripción
@@ -40,10 +41,12 @@ class Personal {
             $this->descrip_anime = ' ';
          } else {    }
      } else { $this->descrip_anime = ' '; }
+    ///// -- 3.- USUARIO -- ////
+     $this->id_user = $id_user;
       ///// -- INSERTAMOS LOS DATOS -- ////
     if ($this->error == 0) {
-      $sql='INSERT INTO lista (id_anime, nom_anime, descrip_anime)
-      VALUES (null ,"'.$this->nom_anime.'" , "'.$this->descrip_anime.'");';
+      $sql='INSERT INTO lista (id_anime,id_user, nom_anime, descrip_anime)
+      VALUES (null , '.$this->id_user.',"'.$this->nom_anime.'" , "'.$this->descrip_anime.'");';
       $eje=$this->conexion->ejecutar($sql);
       echo '<script language="javascript">window.location="/aniworld/personal/agregar/1"</script>' ;
     }

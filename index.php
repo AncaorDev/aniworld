@@ -1,10 +1,10 @@
 <?php ob_start('comprimir_pagina'); ?>
 <?php include ('nucleo/nucleo.php');
-//$abc='123';
-//echo encriptar($abc);
+// $abc='123';
+// echo encriptar($abc);
 if (isset($_GET['page'])) {
       if ($_GET['page']=='index') {
-        include('views/html/index/index.php');
+        include('controllers/indexController.php');
       }
       // else if (file_exists('views/html/public/'.$_GET['page'].'.php')) {
       //     include ('views/html/public/'.$_GET['page'].'.php'); }
@@ -12,7 +12,7 @@ if (isset($_GET['page'])) {
           include ('controllers/'.$_GET['page'].'Controller.php');
       } else {echo 'No existe la Pagina';}
 } else {
-    include('views/html/index/index.php');
+    include('controllers/indexController.php');
 }?>
 
 <?php

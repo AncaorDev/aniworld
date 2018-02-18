@@ -54,7 +54,9 @@
          <a  class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
            <span class="glyphicon glyphicon-user" aria-hidden="true"></span> <?php echo $usuarios[$_SESSION['app_id']]['nom_user']; ?><span class="caret"></span></a>
            <ul class="dropdown-menu">
-             <li><a target="_top" href="panel">Administar</a></li>
+            <?php if ($usuarios[$_SESSION['app_id']]['id_tipouser']==1 or $usuarios[$_SESSION['app_id']]['id_tipouser']==8): ?>
+               <li><a target="_top" href="panel">Administar</a></li>
+             <?php endif; ?>
              <li><a target="_top" href="favoritos">Mi Animes Favoritos</a></li>
              <?php if ($usuarios[$_SESSION['app_id']]['id_tipouser']==8): ?>
                <li><a target="_top" href="personal">Mi Lista</a></li>

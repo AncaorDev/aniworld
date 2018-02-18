@@ -2,6 +2,17 @@
   <div class="row">
         <div class="col-md-12 item-anime">
           <h2 class="about">Sobre Aniworld</h2>
+          <h4>   Versión 1.2 Alpha     </h4>
+          <h5>Detalles de Versión. </h5>
+          <ul>
+            <p>Fecha: 04-06-16</p>
+            <li>Registra, Modifica y Elimina datos de Animes, Estudios y Géneros.</li>
+            <li>Validación de datos a la hora de Registrar, Modificar y Eliminars datos de Animes, Estudios y Géneros.</li>
+            <li>Lista los animes por genero y temporada.</li>
+            <li>Diseño Responsive a un 40% , esto es lo mas odioso para mi.</li>
+            <li class="add">Pagina de Favoritos</li>
+            <li class="add">Código para visualización optimizado</li>
+          </ul>
           <h4>   Versión 1.0 Alpha     </h4>
           <h5>Detalles de Versión. </h5>
           <ul>

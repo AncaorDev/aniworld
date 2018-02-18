@@ -30,10 +30,10 @@
                     <h4 style="color:black;"><?php echo $listado_r[0] ?></h4>
                 </div>
                 <div class="col-md-3" style="text-align:center;border-top:0px solid rgb(127, 202, 136);">
-                    <h4 style="color:black;"><?php echo $listado_r[1] ?></h4>
+                    <h4 style="color:black;"><?php echo $listado_r[2] ?></h4>
                 </div>
                 <div class="col-md-5" style="text-align:center;border-top:0px solid rgb(127, 202, 136);">
-                    <p style="color:black;"> <?php echo $listado_r[2] ?> </p>
+                    <p style="color:black;"> <?php echo $listado_r[3] ?> </p>
                 </div>
                 <div class="col-md-3" style="text-align:center">
                     <a target="_top" href="personal/editar/<?php echo $listado_r[0] ?>"> <button class="btn btn-primary" type="button" name="button" >Editar</button></a>
