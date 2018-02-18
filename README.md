@@ -1,6 +1,6 @@
 ﻿# Aniworld
 
-#### Hola, **aniworld** es un pequeño CRUD de información de anime [Ver](aniworld.ancaor.com) 
+#### Hola, **aniworld** es un pequeño CRUD de información de anime [Ver](http://aniworld.ancaor.com) 
 > Este fue uno de mis primeros pasos por el desarrollo web.
 
 
@@ -12,7 +12,7 @@ Inicio de Proyecto
 
 Version 1.0 Alpha 
 
-	Detalles de versión - Fecha: 21-05-16
+        Detalles de versión - Fecha: 21-05-16
 
 - Registra, Modifica y Elimina datos de Animes, Estudios y Géneros.
 - Validación de datos a la hora de Registrar, Modificar y Eliminar datos de Animes, Estudios y Géneros.
