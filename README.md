@@ -18,3 +18,14 @@ Version 1.0 Alpha
 - Validación de datos a la hora de Registrar, Modificar y Eliminar datos de Animes, Estudios y Géneros.
 - Lista los animes por genero y temporada.
 - Diseño Responsive a un 40% , esto es lo mas odioso para mi.
+
+Versión 1.2 Alpha
+
+        Detalles de Versión - Fecha: 04-06-16
+
+- Registra, Modifica y Elimina datos de Animes, Estudios y Géneros.
+- Validación de datos a la hora de Registrar, Modificar y Eliminars datos de Animes, Estudios y Géneros.
+- Lista los animes por genero y temporada.
+- Diseño Responsive a un 40% , esto es lo mas odioso para mi.
+- Pagina de Favoritos.
+- Código para visualización optimizado.

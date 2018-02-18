@@ -13,7 +13,7 @@
             <li class="add">Pagina de Favoritos</li>
             <li class="add">Código para visualización optimizado</li>
           </ul>
-          <h4>   Versión 1.0 Alpha     </h4>
+          <h4>   Versión 1.0 Alpha</h4>
           <h5>Detalles de Versión. </h5>
           <ul>
             <p>Fecha: 21-05-16</p>
