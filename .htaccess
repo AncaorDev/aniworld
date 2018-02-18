@@ -1,4 +1,9 @@
 RewriteEngine on
+
+# Solo para https
+#RewriteCond %{HTTPS} off
+#RewriteRule (.*) https://%{SERVER_NAME}/$1 [R,L]
+#RewriteBase /
 RewriteCond %{SCRIPT_FILENAME} !-d
 RewriteCond %{SCRIPT_FILENAME} !-f
 
