@@ -1,0 +1,9 @@
+Usuarios:
+- Programador
+- Administrador
+- Moderador
+
+Contraseña para los 3:
+- 123
+
+Funciona con la Base de Datos aniworld.sql
